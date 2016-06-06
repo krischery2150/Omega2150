@@ -1,0 +1,7 @@
+<h1> Capsule Show Page </h1>
+  <h3><%= @capsule.title %></h3>
+  <%= @capsule.about %>
+  <%= @capsule.purpose %>
+<%= link_to "Back", root_path %>
+<%= link_to "Edit",  edit_capsule_path %>
+<%= link_to "Delete", capsule_path, method: :delete, data: { confirm: "Are you sure you want to delete this capsule?"}%>

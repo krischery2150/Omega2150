@@ -1,0 +1,18 @@
+<h1> This is the form </h1>
+
+<%= simple_form_for(@capsule , html: {multipart: true}) do |f| %>
+   <% if @capsule.errors.any? %>
+     <h2><%= pluralize(@capsule.errors.count, "error") %>Prevented this pin from saving</h2>
+       <ul>
+          <% @capsule.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+      </ul>
+    <% end %>
+<%= f.input :title, class: 'form-control' %>
+<%= f.input :about, as: :text , class: 'form-control' %>
+<%= f.input :purpose, as: :text, class: 'form-control' %>
+
+<%= f.button :submit, class: 'btn btn-primary' %>
+
+<% end %>

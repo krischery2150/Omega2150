@@ -1,0 +1,5 @@
+<%= link_to "Create New Capsule", new_capsule_path  %>
+<h1> This is the index place holder </h1>
+<% @capsules.each do |capsule| %>
+    <h2><%= link_to capsule.title , capsule %></h2>
+<% end %>
